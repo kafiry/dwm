@@ -7,7 +7,7 @@
 - Replace st with xterm
 
 
-- slstatus config.h
+- slstatus config.h -> slstatus.config.h
 
 **Font:**
 FantasqueSansMono Nerd Font 
