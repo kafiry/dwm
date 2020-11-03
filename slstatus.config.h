@@ -83,12 +83,11 @@ static const struct arg args[] = {
         //{ print, "%s", "  "},
 
         /* WIFI */
-	    { wifi_essid,   "  %s:",       WLAN_IF },
-	    { wifi_perc,    "%2s%%",        WLAN_IF },
+	    { wifi_essid,   "  %s",    WLAN_IF },
+	    { wifi_perc,    " %2s%%",        WLAN_IF },
 
-        { print, "%s", "|"},
-    	{ netspeed_rx,  "ﰬ%9s|",        WLAN_IF },
-    	{ netspeed_tx,  "ﰵ%9s",         WLAN_IF },
+    	{ netspeed_tx,  "  %9s",     WLAN_IF },
+    	{ netspeed_rx,  " %9s",     WLAN_IF },
 
 	    /* temperature 	
     	{ print, "%s", "|"},
@@ -96,15 +95,13 @@ static const struct arg args[] = {
 	    */
 
         /* CPU */
-    	{ print, "%s", "|"},
-    	{ cpu_perc,     " 龍 %2s%%",    NULL },
-    	{ cpu_freq,     " 勞 %7sHz",    NULL },
+    	{ cpu_perc,     " 龍 %2s%%",  NULL },
+    	{ cpu_freq,     " 勞 %7sHz",  NULL },
 
         /* RAM */
-    	{ print, "%s", "|"},
-    	{ ram_used,     "   %3s",      NULL },
+    	{ ram_used,     "  %3s",    NULL },
 
         /* DATE */
-    	{ print, "%s", "|"},
-    	{ datetime,     " %s",		"  %a,%d %b   %R" },
+    	//{ print, "%s", "| "},
+    	{ datetime,     " %s",  " %a,%d %b  %R" },
 };
