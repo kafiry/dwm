@@ -21,7 +21,7 @@ const char* print(const char* out) {
 	#define WLAN_IF		"athn0"
 /* FreeBSD AR9280 */
 #elif defined(__FreeBSD__)
-	#define WLAN_IF         "wlan0"
+	#define WLAN_IF     "wlan0"
 #endif
 
 /*
@@ -83,11 +83,11 @@ static const struct arg args[] = {
         //{ print, "%s", "  "},
 
         /* WIFI */
-	    { wifi_essid,   "  %s",    WLAN_IF },
-	    { wifi_perc,    " %2s%%",        WLAN_IF },
+	    { wifi_essid,   "^c#ebcb8b^  ^d^%s",   WLAN_IF },
+	    { wifi_perc,    " %2s%%",               WLAN_IF },
 
-    	{ netspeed_tx,  "  %9s",     WLAN_IF },
-    	{ netspeed_rx,  " %9s",     WLAN_IF },
+    	{ netspeed_tx,  " ^c#d08770^ ^d^%9s",  WLAN_IF },
+    	{ netspeed_rx,  "^c#d08770^ ^d^%9s",   WLAN_IF },
 
 	    /* temperature 	
     	{ print, "%s", "|"},
@@ -95,13 +95,13 @@ static const struct arg args[] = {
 	    */
 
         /* CPU */
-    	{ cpu_perc,     " 龍 %2s%%",  NULL },
-    	{ cpu_freq,     " 勞 %7sHz",  NULL },
+    	{ cpu_perc,     " ^c#b48ead^龍 ^d^%2s%%",   NULL },
+    	//{ cpu_freq,     " 勞 %7sHz",  NULL },
 
         /* RAM */
-    	{ ram_used,     "  %3s",    NULL },
+    	{ ram_used,     " ^c#a3be8c^ ^d^%3s",      NULL },
 
         /* DATE */
     	//{ print, "%s", "| "},
-    	{ datetime,     " %s",  " %a,%d %b  %R" },
+    	{ datetime,     " %s",  "^c#5e81ac^ ^d^%a,%d %b ^c#5e81ac^ ^d^%R" },
 };

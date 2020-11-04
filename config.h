@@ -10,8 +10,9 @@ static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "FantasqueSansMono Nerd Font:pixelsize=15" };
-/* add custom color */
-#include "customColor.h"
+static const char darkbg[]          = "#3b4252";    //nord1
+static const char darkfg[]          = "#d8dee9";    //nord4
+static const char nord_blue[]       = "#5E81AC";    //nord10
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] =	 { darkfg, darkbg,      darkbg },
